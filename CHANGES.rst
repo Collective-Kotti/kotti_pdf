@@ -1,7 +1,8 @@
 History
 =======
 
-0.1 - unreleased
-----------------
+0.1 - Beta Release
+------------------
 
-- Create package with ``pcreate -s kotti kotti_pdf``.
+- Added support to upload pdf files.
+- Added support to view pdf files.

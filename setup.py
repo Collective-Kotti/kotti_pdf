@@ -24,7 +24,7 @@ install_requires = [
 setup(
     name='kotti_pdf',
     version=version,
-    description="Add on for Kotti",
+    description="PDF support for Kotti",
     long_description='\n\n'.join([README, CHANGES]),
     classifiers=[
         "Programming Language :: Python",
@@ -36,10 +36,10 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         "License :: Repoze Public License",
     ],
-    author='Kotti developers',
-    author_email='kotti@googlegroups.com',
+    author='Oshane Bailey',
+    author_email='b4.oshany@gmail.com',
     url='https://github.com/b4oshany/kotti_pdf',
-    keywords='kotti web cms wcms pylons pyramid sqlalchemy bootstrap',
+    keywords='kotti web cms wcms pylons pyramid sqlalchemy bootstrap pdf',
     license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
     packages=find_packages(),
     include_package_data=True,

@@ -1,7 +1,8 @@
 kotti_pdf
 *********
 
-This is an extension to Kotti that allows to add foo to your site.
+This is an extension to Kotti that allow users to upload and view PDF to your site.
+PDF files are stored in the database and is protected by Kotti's user roles and permissions.
 
 |pypi|_
 |downloads_month|_
