@@ -59,10 +59,6 @@ class PDFView(object):
         else:
             disposition = "inline"
 
-        if not (width and height):
-            return self.request.uploaded_file_response(
-                self.context.data, disposition)
-
         pdf = self.context.data.file.read()
         res = Response(
             headerlist=[
@@ -74,7 +70,4 @@ class PDFView(object):
             ],
             body=pdf,
         )
-        # res.content_disposition = rfc6266.build_header(
-        #     self.context.filename, disposition=disposition,
-        #     filename_compat=unidecode(self.context.filename))
         return res

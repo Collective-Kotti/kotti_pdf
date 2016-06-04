@@ -9,8 +9,7 @@
     </p>
     <div tal:replace="api.render_template('kotti:templates/view/tags.pt')" />
     <div class="body">
-        <!-- <img src="${request.resource_url(context, 'image')}" /> -->
-        <embed src="${request.resource_url(context, 'image')}" type='application/pdf'>
+        <embed class="kotti_pdf_file" src="${request.resource_url(context, 'pdf')}" type='application/pdf'>
     </div>
   </article>
 
