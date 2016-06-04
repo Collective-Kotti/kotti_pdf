@@ -13,7 +13,7 @@ try:
 except IOError:
     CHANGES = ''
 
-version = "1.0.0"
+version = "1.0.1"
 
 install_requires = [
     'Kotti>=1.0.0',
@@ -52,5 +52,6 @@ setup(
             'kotti_pdf = kotti_pdf.fanstatic:library',
         ],
     },
+    package_data={"kotti_pdf": ["templates/*", "static/*"]},
     extras_require={},
 )
