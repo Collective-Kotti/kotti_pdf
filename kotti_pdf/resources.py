@@ -26,7 +26,6 @@ class PDF(File):
     #: Primary key column in the DB
     id = Column(Integer(), ForeignKey('files.id'), primary_key=True)
 
-
     type_info = Content.type_info.copy(
         name=u'PDF',
         title=_(u'PDF'),

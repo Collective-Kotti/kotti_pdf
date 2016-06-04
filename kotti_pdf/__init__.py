@@ -25,7 +25,9 @@ def kotti_configure(settings):
     settings['pyramid.includes'] += ' kotti_pdf'
     settings['kotti.alembic_dirs'] += ' kotti_pdf:alembic'
     settings['kotti.available_types'] += ' kotti_pdf.resources.PDF'
-    settings['kotti.fanstatic.view_needed'] += ' kotti_pdf.fanstatic.css_and_js'
+    settings['kotti.fanstatic.view_needed'] += (
+        ' kotti_pdf.fanstatic.css_and_js'
+    )
 
 
 def includeme(config):
