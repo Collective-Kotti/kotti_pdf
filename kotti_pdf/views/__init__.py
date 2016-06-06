@@ -22,11 +22,10 @@ class PDFView(object):
     """The PDFView class is registered for the :class:`IPDF` context."""
 
     def __init__(self, context, request):
-
         self.context = context
         self.request = request
 
-    @view_config(name='view',
+    @view_config(name='view', permission="view",
                  renderer='kotti_pdf:templates/pdf.pt')
     def view(self):
         """
@@ -36,7 +35,7 @@ class PDFView(object):
         """
         return {}
 
-    @view_config(name="pdf")
+    @view_config(name="pdf", permission="view")
     def pdf(self, subpath=None):
         """Return the pdf in a specific scale, either inline
         (default) or as attachment.
