@@ -13,7 +13,7 @@ try:
 except IOError:
     CHANGES = ''
 
-version = '0.3.3'
+version = "0.3.4"
 
 install_requires = [
     'Kotti>=1.0.0',
@@ -42,13 +42,17 @@ setup(
     license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
     packages=find_packages(),
     include_package_data=True,
-    package_data={"kotti_pdf": ["templates/*", "static/*",
-                                "locale/*", "views/*",
-                                "alembic/*.*", "alembic/*/*.py"]},
     zip_safe=False,
     install_requires=install_requires,
     tests_require=[],
     dependency_links=[],
-    entry_points={},
+    entry_points={
+        'fanstatic.libraries': [
+            'kotti_pdf = kotti_pdf.fanstatic:library',
+        ],
+    },
+    package_data={"kotti_pdf": ["templates/*", "static/*",
+                                "locale/*", "views/*",
+                                "alembic/*.*", "alembic/*/*"]},
     extras_require={},
 )
