@@ -5,8 +5,6 @@ Created on 2015-12-16
 :author: Andreas Kaiser (disko@binary-punks.com)
 """
 
-# import PIL
-# import rfc6266
 from unidecode import unidecode
 
 from kotti.util import extract_from_settings

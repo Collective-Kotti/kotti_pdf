@@ -13,20 +13,22 @@ try:
 except IOError:
     CHANGES = ''
 
+version = '0.2.0-dev'
+
 install_requires = [
-    'Kotti>=1.0.0',
-    'kotti_tinymce',
+    'Kotti>=1.3.0-dev',
+    'rfc6266',
+    'unidecode',
 ]
 
 
 setup(
     name='kotti_pdf',
-    version="1.0.3",
-    description="PDF support for Kotti",
+    version=version,
+    description="PDF content type for Kotti",
     long_description='\n\n'.join([README, CHANGES]),
     classifiers=[
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Framework :: Pylons",
         "Topic :: Internet :: WWW/HTTP",
@@ -45,12 +47,6 @@ setup(
     install_requires=install_requires,
     tests_require=[],
     dependency_links=[],
-    entry_points={
-        'fanstatic.libraries': [
-            'kotti_pdf = kotti_pdf.fanstatic:library',
-        ],
-    },
-    package_data={"kotti_pdf": ["templates/*", "static/*",
-                                "locale/*", "views/*", "alembic/*"]},
+    entry_points={},
     extras_require={},
 )

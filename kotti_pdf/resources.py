@@ -4,13 +4,11 @@
 Created on 2015-12-16
 :author: Andreas Kaiser (disko@binary-punks.com)
 """
-# from depot.fields.filters.thumbnails import WithThumbnailFilter
 from kotti.resources import Content
 from kotti.resources import File
 from sqlalchemy import Column
 from sqlalchemy import ForeignKey
 from sqlalchemy import Integer
-from sqlalchemy.ext.declarative import declared_attr
 from zope.interface import implementer
 
 from kotti_pdf import _
