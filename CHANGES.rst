@@ -6,3 +6,4 @@ History
 
 - Added support to upload pdf files.
 - Added support to view pdf files.
+- Added database migration option.
