@@ -1,0 +1,7 @@
+include README.rst
+include *.txt
+recursive-include kotti_pdf static/*
+recursive-include kotti_pdf templates/*
+recursive-include kotti_pdf locale/*
+recursive-include kotti_pdf views/*
+recursive-include kotti_pdf alembic/*

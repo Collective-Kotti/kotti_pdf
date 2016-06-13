@@ -5,6 +5,8 @@ Created on 2016-06-04
 :author: Oshane Bailey (b4.oshany@gmail.com)
 """
 
+__version__ = "1.0.3"
+
 from pyramid.i18n import TranslationStringFactory
 
 _ = TranslationStringFactory('kotti_pdf')

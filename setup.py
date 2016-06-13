@@ -13,8 +13,6 @@ try:
 except IOError:
     CHANGES = ''
 
-version = "1.0.3"
-
 install_requires = [
     'Kotti>=1.0.0',
     'kotti_tinymce',
@@ -23,7 +21,7 @@ install_requires = [
 
 setup(
     name='kotti_pdf',
-    version=version,
+    version="1.0.3",
     description="PDF support for Kotti",
     long_description='\n\n'.join([README, CHANGES]),
     classifiers=[
@@ -53,6 +51,6 @@ setup(
         ],
     },
     package_data={"kotti_pdf": ["templates/*", "static/*",
-                                "locale/*", "views/*"]},
+                                "locale/*", "views/*", "alembic/*"]},
     extras_require={},
 )
