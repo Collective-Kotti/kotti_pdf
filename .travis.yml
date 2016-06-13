@@ -1,7 +1,8 @@
 language: python
 python:
-  - "2.6"
   - "2.7"
+services:
+- postgresql
 env:
   - KOTTI_TEST_DB_STRING=postgresql://postgres@localhost:5432/kotti_pdf_testing
   - KOTTI_TEST_DB_STRING=mysql+oursql://root@localhost:3306/kotti_pdf_testing

@@ -1,18 +1,24 @@
 History
 =======
 
-0.3 - Publish package
----------------------
+
+0.3.1 - Fix pypi errors
+------------------------
+
+- Fixed long description
+
+0.3.0 - Publish package
+------------------------
 
 - Publish package
 
-0.2 - Official Release
+0.2.0 - Official Release
 ----------------------
 
 - Added support to view pdf files.
 - Added database migration option.
 
-0.1 - Beta Release
+0.1.0 - Beta Release
 ------------------
 
 - Added support to upload pdf files.
