@@ -13,7 +13,7 @@ try:
 except IOError:
     CHANGES = ''
 
-version = '0.3.2'
+version = '0.3.3'
 
 install_requires = [
     'Kotti>=1.0.0',
@@ -42,6 +42,9 @@ setup(
     license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
     packages=find_packages(),
     include_package_data=True,
+    package_data={"kotti_pdf": ["templates/*", "static/*",
+                                "locale/*", "views/*",
+                                "alembic/*.*", "alembic/*/*.py"]},
     zip_safe=False,
     install_requires=install_requires,
     tests_require=[],
