@@ -1,6 +1,11 @@
 History
 =======
 
+0.4.0 - Fixed bugs
+-------------------
+
+- Fixed PyPi requirements
+- Fixed Resource URI
 
 0.3.1 - Fix pypi errors
 ------------------------
