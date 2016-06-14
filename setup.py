@@ -13,7 +13,7 @@ try:
 except IOError:
     CHANGES = ''
 
-version = "0.4.0"
+version = "0.4.1"
 
 install_requires = [
     'Kotti>=1.0.0',
@@ -53,6 +53,6 @@ setup(
     },
     package_data={"kotti_pdf": ["templates/*", "static/*",
                                 "locale/*", "views/*",
-                                "alembic/*.*", "alembic/*/*"]},
+                                "alembic/*.*", "alembic/versions/*"]},
     extras_require={},
 )
