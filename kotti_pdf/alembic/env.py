@@ -12,7 +12,7 @@ config = context.config
 try:
     fileConfig(config.config_file_name)
 except Exception as e:
-    print e
+    pass
 
 # add your model's MetaData object here
 # for 'autogenerate' support
