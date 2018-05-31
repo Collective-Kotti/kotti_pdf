@@ -1,7 +1,7 @@
 History
 =======
 
-0.4.0 - Fixed bugs
+0.4.x - Fixed bugs
 -------------------
 
 - Fixed PyPi requirements
