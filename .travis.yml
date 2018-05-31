@@ -1,19 +1,22 @@
 language: python
 python:
-  - "2.7"
-services:
-- postgresql
+- '2.7'
 env:
-  - KOTTI_TEST_DB_STRING=postgresql://postgres@localhost:5432/kotti_pdf_testing
-  - KOTTI_TEST_DB_STRING=mysql+oursql://root@localhost:3306/kotti_pdf_testing
-  - KOTTI_TEST_DB_STRING=sqlite://
+- KOTTI_TEST_DB_STRING=postgresql://postgres@localhost:5432/kotti_pdf_testing
+- KOTTI_TEST_DB_STRING=sqlite://
 install:
-  - pip install "pip==1.3.1"  # fix issue with fanstatic==1.0a
-  - pip install psycopg2 oursql
-  - pip install -e . -r https://raw.github.com/Kotti/Kotti/stable/requirements.txt
-  - pip install --pre Kotti
-  - pip install "wsgi_intercept==0.5.1"
-  - python setup.py devbefore_script:
-  - psql -c 'create database kotti_pdf_testing;' -U postgres
-  - mysql -e 'create database kotti_pdf_testing;'
-script: py.test --tb=native --cov=kotti --cov-report=term-missing
+- pip install "pip==1.3.1"
+- pip install psycopg2 oursql
+- pip install -e . -r https://raw.github.com/Kotti/Kotti/stable/requirements.txt
+- pip install "wsgi_intercept==0.5.1"
+- python setup.py dev
+- psql -c 'create database kotti_pdf_testing;' -U postgres
+script:
+- echo "Done"
+deploy:
+  provider: pypi
+  user: b4oshany
+  password:
+    secure: D/JxA4tRuWOmDxn3g+/y+rADN056vyLJ9bDFTBFjH4rW1QUqL744R4TA0JaIhUV3r/5x/LRwr2ACETe3KLZ5tlfnJofajpWPy434xyNUWN1oHXYqSyabsLXbXGajQMH5BaBfv6DZKCmZBS5Nvl7xohhsLClR/teuZgbCl3xC8RhaW8eRDFDQJgvZF4K6Kjpgka7ZX6DSTyLAP8owK6P065fGjRkxWUrkGgfDWWVsMQ9h2sGVa+KUdHr89WSmN++a4C1CPw0YAVo6OHzNyJTZFdrWyk527VCyiWV6pXJfIypZNbgOhhCoOtmuWyKhzD5mB4+GQkWZBkMdqz8mqldTI7/KsSZ5A8ha+4o6MSZ5GZgASCliuY7xgufbG1FTN2phJrim+BQrE50MlAbikRBbXF7j7RNBo9airQaIjmA2SXLipl8UOH3OyYp/1QoLMGhN0mEhKWD7eDsLK4nLakaikme1JNggVstZDGpRP3XJdhPMIk08abvWwrvO/c+TSDyEIapIing65lje0ILYCyRDHSBq03R1ehxorLtvsDCzqjb4o8YjJYFDxhwHGnHk/rdPMTVcsdsR6I8vySVK/FyDPJMZwaQr4O1EmEcvGDWz6LaFfRGuOaFdOzbikeid3yzRbG0Wde5E423U9Moe0YIgACwkazpoiTxKfm+pxCrAgAA=
+  on:
+    tags: true
